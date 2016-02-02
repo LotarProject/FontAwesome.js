@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FontAwesome Cheatsheet</title>
+  <script src="../fa.js"></script>
+  <script src="fa-icons.js"></script>
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body class="container">
+  <h1>FontAwesome Cheatsheet</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th rowspan="2">Name</th>
+        <th colspan="6">Sizes</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>lg</td>
+        <td>2x</td>
+        <td>3x</td>
+        <td>4x</td>
+        <td>5x</td>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    FontAwesome.load();
+    FontAwesome.options.fixedWidth = true;
+
+    jQuery('h1').prepend(FontAwesome.icon('th-list', { inverse: true })
+                                    .stack('square', true).element);
+
+    var $tbody = jQuery('tbody'),
+        sizes  = ['', 'lg', '2x', '3x', '4x', '5x'];
+
+    for (i in FA_ICONS) {
+
+      var icon = FA_ICONS[i];
+
+      var $tr = jQuery('<tr><td class="name"/></tr>');
+          $tr.find('td.name').html(icon);
+
+      for (i in sizes) {
+        $tr.append(jQuery('<td/>').append(FontAwesome.icon(icon, { size: sizes[i], id: icon }).element));
+      }
+
+      $tbody.append($tr);
+
+    }
+  </script>
+</body>
+</html>
