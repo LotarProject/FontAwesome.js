@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FontAwesome Cheatsheet</title>
+  <title>FontAwesome Icons</title>
   <script src="https://rawgit.com/LotarProject/FontAwesome.js/master/fa.min.js"></script>
   <script src="fa-icons.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body class="container">
-  <h1>FontAwesome Cheatsheet</h1>
+  <h1>FontAwesome Icons</h1>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -30,10 +30,12 @@
 
   <script>
     FontAwesome.load();
+
+    // Set global Fixed Width
     FontAwesome.options.fixedWidth = true;
 
-    jQuery('h1').prepend(FontAwesome.icon('th-list', { inverse: true })
-                                    .stack('square', true).element);
+    // Add an icon on title
+    jQuery('h1').prepend(FontAwesome.icon('font-awesome').element);
 
     var $tbody = jQuery('tbody'),
         sizes  = ['', 'lg', '2x', '3x', '4x', '5x'];

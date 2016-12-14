@@ -1,5 +1,5 @@
 /*!
- * FontAwesome.js - v0.1.0 - 2016-02-02
+ * FontAwesome.js - v0.1.1 - 2016-12-14
  * https://github.com/LotarProject/FontAwesome.js
  * Copyright (c) 2016 Giuseppe Di Terlizzi; Licensed MIT
  */
@@ -20,8 +20,9 @@ var STYLES          = {},
       rotate     : -1,
       flip       : null,
       inverse    : false,
-      url        : 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+      url        : 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
       classes    : null,
+      tag        : 'i',
     };
 
 function applyDefaultOptions(options) {
@@ -37,7 +38,8 @@ function applyDefaultOptions(options) {
 
 function createIcon() {
 
-  var element = document.createElement('i');
+  var tag     = FontAwesome.options.tag;
+  var element = document.createElement(tag);
 
   for (var i in STYLES) {
     element.style[i] = STYLES[i];

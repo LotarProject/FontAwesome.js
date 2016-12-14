@@ -55,6 +55,7 @@ FontAwesome.js uses the same FontAwesome classes to change the look and the beha
 | `url`        | URL of FontAwesome  | -                            | CDN URL   |
 | `id`         | Icon ID             | -                            | (none)    |
 | `classes`    | Additional class    | -                            | (none)    |
+| `tag`        | Default icon tag    | -                            | `i`       |
 
 #### Global options
 
