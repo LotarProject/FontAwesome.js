@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fontawesome.js by LotarProject</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fontawesome.js</h1>
+        <p>Simple JS library helper for FontAwesome</p>
+
+        <p class="view"><a href="https://github.com/LotarProject/FontAwesome.js">View the Project on GitHub <small>LotarProject/FontAwesome.js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/LotarProject/FontAwesome.js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/LotarProject/FontAwesome.js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/LotarProject/FontAwesome.js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="fontawesomejs" class="anchor" href="#fontawesomejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FontAwesome.js</h1>
+
+<p>Simple JS library helper for FontAwesome</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Download FontAwesome.js from GitHub.</p>
+
+<p>Include the <code>fa.js</code> file (or <code>fa.min.js</code>) in your page.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>fa.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Finally include FontAwesome CSS in your page.</p>
+
+<p><strong>NOTE:</strong> You can to use <code>FontAwesome.load()</code> method to add on-the-fly FontAwesome CSS in your page</p>
+
+<h2>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Usage</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>fa.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span>&gt;
+  &lt;<span class="pl-ent">h1</span>&gt;Hello, FontAwesome.js!&lt;/<span class="pl-ent">h1</span>&gt;
+<span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-c">// Load FontAwesome CSS</span></span>
+<span class="pl-s1">    <span class="pl-smi">FontAwesome</span>.<span class="pl-c1">load</span>();</span>
+<span class="pl-s1">    <span class="pl-c">// Prepend "home" icon to h1 element</span></span>
+<span class="pl-s1">    <span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>home<span class="pl-pds">'</span></span>).<span class="pl-en">prependTo</span>(<span class="pl-s"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;
+</pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
+
+<p>FontAwesome.js uses the same FontAwesome classes to change the look and the behavior of the icons (see <a href="http://fontawesome.io/examples/">http://fontawesome.io/examples/</a>).</p>
+
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Allowed Values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>Size of icon</td>
+<td>
+<code>lg</code>, <code>2x</code>, <code>3x</code>, <code>4x</code>, <code>5x</code>
+</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td><code>fixedWidth</code></td>
+<td>Fix a width of icon</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>Add a border</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>pullLeft</code></td>
+<td>Pull icon to left</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>pullRight</code></td>
+<td>Pull icon to right</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>spin</code></td>
+<td>Spin animation</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>pulse</code></td>
+<td>Pulse animation</td>
+<td>
+<code>true</code>, <code>false</code>
+</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>rotate</code></td>
+<td>Rotate the icon</td>
+<td>
+<code>90</code>, <code>180</code>, <code>270</code>
+</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td><code>flip</code></td>
+<td>Flip the icon</td>
+<td>
+<code>horizontal</code>, <code>vertical</code>
+</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>URL of FontAwesome</td>
+<td>-</td>
+<td>CDN URL</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Icon ID</td>
+<td>-</td>
+<td>(none)</td>
+</tr>
+<tr>
+<td><code>classes</code></td>
+<td>Additional class</td>
+<td>-</td>
+<td>(none)</td>
+</tr>
+</tbody>
+</table>
+
+<h4>
+<a id="global-options" class="anchor" href="#global-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Global options</h4>
+
+<p>Can you change the option globally using the <code>FontAwesome.options</code> object.</p>
+
+<p>For example:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-c1">options</span> <span class="pl-k">=</span> {
+  pullLeft<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+  url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>http://example.org/assets/font-awesome/font-awesome.min.css<span class="pl-pds">'</span></span>
+}</pre></div>
+
+<h4>
+<a id="fontawesomeicon-method" class="anchor" href="#fontawesomeicon-method" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FontAwesome.icon method</h4>
+
+<p>Can you override the global options with <code>FontAwesome.icon</code> method:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>spinner<span class="pl-pds">'</span></span>, { spin<span class="pl-k">:</span> <span class="pl-c1">true</span> })</pre></div>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h2>
+
+<h4>
+<a id="load" class="anchor" href="#load" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.load()</h4>
+
+<h4>
+<a id="loadurl" class="anchor" href="#loadurl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.load(url)</h4>
+
+<p>Add on-the-fly FontAwesome CSS in your page</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-c1">load</span>(<span class="pl-s"><span class="pl-pds">'</span>http://example.org/assets/font-awesome/font-awesome.min.css<span class="pl-pds">'</span></span>);</pre></div>
+
+<h4>
+<a id="cssobject" class="anchor" href="#cssobject" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.css(object)</h4>
+
+<p>Apply a CSS style to icon <em>(chainable method)</em></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>).<span class="pl-en">css</span>({color<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#DDD<span class="pl-pds">'</span></span>}).<span class="pl-smi">element</span>; <span class="pl-c">// &lt;i class="fa fa-user" style="color:#DDD"&gt;&lt;/i&gt;</span></pre></div>
+
+<h4>
+<a id="prependtoselector" class="anchor" href="#prependtoselector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.prependTo(selector)</h4>
+
+<p>Prepend the icon for all matches selector</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>).<span class="pl-en">prependTo</span>(<span class="pl-s"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>); <span class="pl-c">// &lt;h1&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;Title&lt;/h1&gt;</span></pre></div>
+
+<h4>
+<a id="appendtoselector" class="anchor" href="#appendtoselector" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.appendTo(selector)</h4>
+
+<p>Append the icon for all matches selector</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>).<span class="pl-en">appendTo</span>(<span class="pl-s"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>); <span class="pl-c">// &lt;h1&gt;Title&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/h1&gt;</span></pre></div>
+
+<h4>
+<a id="iconicon" class="anchor" href="#iconicon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.icon(icon)</h4>
+
+<h4>
+<a id="iconicon-options" class="anchor" href="#iconicon-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.icon(icon, options)</h4>
+
+<p>Set the icon and options <em>(chainable method)</em></p>
+
+<h4>
+<a id="stackicon" class="anchor" href="#stackicon" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.stack(icon)</h4>
+
+<h4>
+<a id="stackicon-reverse" class="anchor" href="#stackicon-reverse" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.stack(icon, reverse)</h4>
+
+<h4>
+<a id="stackicon-options" class="anchor" href="#stackicon-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.stack(icon, options)</h4>
+
+<h4>
+<a id="stackicon-options-reverse" class="anchor" href="#stackicon-options-reverse" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.stack(icon, options, reverse)</h4>
+
+<p>Set the stack icon <em>(chainable method)</em></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>terminal<span class="pl-pds">'</span></span>, { inverse<span class="pl-k">:</span> <span class="pl-c1">true</span> }).<span class="pl-en">stack</span>(<span class="pl-s"><span class="pl-pds">'</span>square<span class="pl-pds">'</span></span>, { size<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>lg<span class="pl-pds">'</span></span>}, <span class="pl-c1">true</span>);</pre></div>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa-stack fa-lg<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-square fa-stack-2x<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+  &lt;<span class="pl-ent">i</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>fa fa-terminal fa-inverse fa-stack-1x<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">i</span>&gt;
+&lt;/<span class="pl-ent">span</span>&gt;</pre></div>
+
+<h2>
+<a id="properties" class="anchor" href="#properties" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Properties</h2>
+
+<h4>
+<a id="options-1" class="anchor" href="#options-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.options</h4>
+
+<p>FontAwesome.js options (see Options above)</p>
+
+<h4>
+<a id="element" class="anchor" href="#element" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.element</h4>
+
+<p>Return a <code>DOMElement</code> of the icon (useful to use with another JS library - eg. jQuery)</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">jQuery</span>(<span class="pl-s"><span class="pl-pds">'</span>h1<span class="pl-pds">'</span></span>).<span class="pl-c1">prepend</span>(<span class="pl-smi">FontAwesome</span>.<span class="pl-en">icon</span>(<span class="pl-s"><span class="pl-pds">'</span>user<span class="pl-pds">'</span></span>).<span class="pl-smi">element</span>);</pre></div>
+
+<h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>Currently Supports: FF, Chrome, IE9+ and other modern and decent browsers</p>
+
+<hr>
+
+<p>Copyright (C) 2016, Giuseppe Di Terlizzi <a href="mailto:giuseppe.diterlizzi@gmail.com">giuseppe.diterlizzi@gmail.com</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/LotarProject">LotarProject</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
