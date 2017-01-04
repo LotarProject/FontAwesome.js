@@ -5,9 +5,9 @@ Simple JS library helper for FontAwesome
 
 Download **FontAwesome.js** from GitHub or install via ``bower``:
 
-``
-bower install FontAwesome.js
-``
+```sh
+$ bower install FontAwesome.js
+```
 
 Include the `fa.js` file (or `fa.min.js`) in your page.
 
