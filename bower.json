@@ -1,0 +1,16 @@
+{
+  "name": "FontAwesome.js",
+  "homepage": "https://github.com/LotarProject/FontAwesome.js",
+  "authors": [
+    "Giuseppe Di Terlizzi <giuseppe.diterlizzi@gmail.com>"
+  ],
+  "description": "Simple JS library helper for FontAwesome",
+  "main": "fa.js",
+  "keywords": [
+    "FontAwesome",
+    "JS",
+    "library",
+    "WebFont"
+  ],
+  "license": "MIT"
+}
