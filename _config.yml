@@ -1,0 +1,8 @@
+title: FontAwesome.js
+description: Simple JS library helper for FontAwesome
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
